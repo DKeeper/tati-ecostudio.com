@@ -37,6 +37,9 @@ return [
                 ],
             ]
         ],
+        'request' => [
+            'cookieValidationKey' => 'wWx0Lt8FglIuE6C32JHn',
+        ]
     ],
     'modules' => [
         'user' => [

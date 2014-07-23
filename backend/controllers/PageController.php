@@ -6,14 +6,14 @@ use Yii;
 use yii\filters\AccessControl;
 use common\models\Page;
 use common\models\PageSearch;
-use yii\web\Controller;
+use common\controllers\BasePageController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * PageController implements the CRUD actions for Page model.
  */
-class PageController extends Controller
+class PageController extends BasePageController
 {
     public function behaviors()
     {
@@ -60,12 +60,6 @@ class PageController extends Controller
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
-        ]);
-    }
-
-    public function actionViewbyname($name){
-        return $this->render('viewpagecontent', [
-            'model' => $this->findModelByName($name),
         ]);
     }
 
@@ -129,19 +123,6 @@ class PageController extends Controller
     protected function findModel($id)
     {
         if (($model = Page::findOne($id)) !== null) {
-            return $model;
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
-    }
-
-    /**
-     * @param integer $name
-     * @return Page the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    protected function findModelByName($name){
-        if (($model = Page::findOne(['name'=>$name])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

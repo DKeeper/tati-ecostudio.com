@@ -34,7 +34,9 @@ return [
                     'defaults' => ['name'=>'main'],
                 ],
                 '<action(login|logout|register|account|profile)>' => 'user/<action>',
+                'files/<param:\d+x\d+>/<src:.+>' => 'files/resize',
                 'files/<src:.+>' => 'files/index',
+                'works/<id:\d+>' => 'works/view',
                 '<name(\w+)>' => 'page/viewbyname',
             ],
         ],
@@ -43,7 +45,7 @@ return [
             'baseUrl' => '@web/assets'
         ],
         'request' => [
-            'baseUrl' => ''
+            'baseUrl' => '',
         ]
     ],
     'params' => $params,

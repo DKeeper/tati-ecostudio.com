@@ -9,14 +9,14 @@ namespace backend\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
-use yii\web\Controller;
+use common\controllers\BaseFilesController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * ImagesController implements the CRUD actions for Images model.
  */
-class FilesController extends Controller
+class FilesController extends BaseFilesController
 {
     public function behaviors()
     {
@@ -37,26 +37,5 @@ class FilesController extends Controller
                 ],
             ],
         ];
-    }
-
-    /**
-     * Lists all Images models.
-     * @param $src
-     * @throws \yii\web\NotFoundHttpException
-     * @return mixed
-     */
-    public function actionIndex($src)
-    {
-        if(preg_match('/picture/',$src)){
-            $src = preg_replace('/picture\//','',$src);
-        }
-        $fileName = Yii::getAlias("@app")."/../".$src;
-        if(!file_exists($fileName)){
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
-        $_im = new \Imagick($fileName);
-        header('Content-Type: '.$_im->getimagemimetype());
-        readfile($fileName);
-        Yii::$app->end();
     }
 }

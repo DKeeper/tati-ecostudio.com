@@ -21,7 +21,6 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
 </head>
 <body>
     <?php $this->beginBody() ?>
@@ -34,12 +33,6 @@ AppAsset::register($this);
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
             ]);
-//            $menuItems = [
-//                ['label' => 'Home', 'url' => ['/site/index']],
-//                ['label' => 'About', 'url' => ['/site/about']],
-//                ['label' => 'Contact', 'url' => ['/site/contact']],
-//                ['label' => 'User', 'url' => ['/user']],
-//            ];
             /** @var $activePages Page[] */
             $activePages = Page::find()->where(['status'=>1])->orderBy('output_order')->all();
             foreach($activePages as $page){
@@ -48,7 +41,7 @@ AppAsset::register($this);
             }
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = [
-                    'label' => Yii::$app->user->displayName,
+                    'label' => Yii::t('view','Guest'),
                     'items' => [
                         ['label' => 'Signup', 'url' => ['/user/register']],
                         ['label' => 'Login', 'url' => ['/user/login']]
@@ -96,7 +89,7 @@ AppAsset::register($this);
         <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>
-
+    <?php $this->head() ?>
     <?php $this->endBody() ?>
 </body>
 </html>
