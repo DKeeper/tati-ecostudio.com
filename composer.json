@@ -20,7 +20,8 @@
 		"yiisoft/yii2-swiftmailer": "*",
         "amnah/yii2-user": "~2.0",
         "letyii/yii2-tinymce": "dev-master",
-        "metalguardian/yii2-fotorama-widget": "*"
+        "metalguardian/yii2-fotorama-widget": "*",
+        "dkeeper/yii2-mobiledetect": "dev-master"
 	},
 	"require-dev": {
 		"yiisoft/yii2-codeception": "*",

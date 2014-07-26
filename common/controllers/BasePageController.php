@@ -66,12 +66,20 @@ class BasePageController extends Controller
             }
         }
         $_result .= '<div class="center-block"><div class="col-md-12">';
+        $mobileDetect = Yii::$app->params['detect'];
+        $maxWidth = 600;
+        if($mobileDetect['isTablet']){
+            $maxWidth = 500;
+        }
+        if($mobileDetect['isMobile']){
+            $maxWidth = 300;
+        }
         $_result .= \metalguardian\fotorama\Fotorama::widget(
             [
                 'items' => $_images,
                 'options' => [
                     'nav' => 'thumbs',
-                    'maxwidth' => 300
+                    'maxwidth' => $maxWidth
                 ]
             ]
         );

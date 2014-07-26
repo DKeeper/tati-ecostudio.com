@@ -9,6 +9,9 @@ return [
         'user' => [
             'class' => 'amnah\yii2\user\components\User',
         ],
+        'mobiledetect' => [
+            'class' => 'dkeeper\mobiledetect\Detect',
+        ],
         'mail' => [
             'class' => 'yii\swiftmailer\Mailer',
             'useFileTransport' => true,

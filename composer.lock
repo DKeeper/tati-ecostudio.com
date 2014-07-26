@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c70c31ef96d80bb7fffa66bbc56a1485",
+    "hash": "36baba56aba166eda21d614c5d0b348d",
     "packages": [
         {
             "name": "amnah/yii2-user",
@@ -108,6 +108,44 @@
                 "markdown-extra"
             ],
             "time": "2014-03-05 16:30:51"
+        },
+        {
+            "name": "dkeeper/yii2-mobiledetect",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DKeeper/yii2-mobiledetect.git",
+                "reference": "8155991533d17dde72a3ae6bf130dfc4d43f61ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DKeeper/yii2-mobiledetect/zipball/8155991533d17dde72a3ae6bf130dfc4d43f61ae",
+                "reference": "8155991533d17dde72a3ae6bf130dfc4d43f61ae",
+                "shasum": ""
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "dkeeper\\mobiledetect\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "DKeeper",
+                    "email": "dkapenkin@rambler.ru"
+                }
+            ],
+            "description": "Detect type of device by information from request",
+            "keywords": [
+                "extension",
+                "mobile detect",
+                "yii2"
+            ],
+            "time": "2014-07-26 17:07:48"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -290,12 +328,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "36483af92c2d0be97aa86f16ffcf5f67abf2ed11"
+                "reference": "c2f4e5fef1e9f11fa532cb98ccf088e8890e25fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/36483af92c2d0be97aa86f16ffcf5f67abf2ed11",
-                "reference": "36483af92c2d0be97aa86f16ffcf5f67abf2ed11",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/c2f4e5fef1e9f11fa532cb98ccf088e8890e25fc",
+                "reference": "c2f4e5fef1e9f11fa532cb98ccf088e8890e25fc",
                 "shasum": ""
             },
             "replace": {
@@ -333,7 +371,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-07-22 05:48:38"
+            "time": "2014-07-25 18:02:30"
         },
         {
             "name": "yiisoft/jquery",
@@ -390,12 +428,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "53887ab11f2ff508ecf6d60083f37c16fa193f28"
+                "reference": "335933c9bf2a2905fe70a48e230659da14e6cebb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/53887ab11f2ff508ecf6d60083f37c16fa193f28",
-                "reference": "53887ab11f2ff508ecf6d60083f37c16fa193f28",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/335933c9bf2a2905fe70a48e230659da14e6cebb",
+                "reference": "335933c9bf2a2905fe70a48e230659da14e6cebb",
                 "shasum": ""
             },
             "require": {
@@ -463,7 +501,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-07-23 12:42:41"
+            "time": "2014-07-26 14:08:52"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -765,12 +803,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "ce6644841f805bfce14453bbe4eba17b8bb6e549"
+                "reference": "3919852efa2a4526d8388b4c9d5b8590b0ebf85a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/ce6644841f805bfce14453bbe4eba17b8bb6e549",
-                "reference": "ce6644841f805bfce14453bbe4eba17b8bb6e549",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/3919852efa2a4526d8388b4c9d5b8590b0ebf85a",
+                "reference": "3919852efa2a4526d8388b4c9d5b8590b0ebf85a",
                 "shasum": ""
             },
             "require": {
@@ -800,7 +838,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2014-07-23 12:37:49"
+            "time": "2014-07-25 11:01:13"
         }
     ],
     "aliases": [
@@ -808,7 +846,8 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "letyii/yii2-tinymce": 20
+        "letyii/yii2-tinymce": 20,
+        "dkeeper/yii2-mobiledetect": 20
     },
     "platform": {
         "php": ">=5.4.0"
