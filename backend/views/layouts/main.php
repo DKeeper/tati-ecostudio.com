@@ -48,7 +48,8 @@ AppAsset::register($this);
                         'label' => Yii::$app->user->displayName,
                         'items' => [
                             ['label' => 'User', 'url' => ['/user/admin']],
-                            ['label' => 'Page', 'url' => ['/page/']],
+                            ['label' => 'Pages', 'url' => ['/page']],
+                            ['label' => 'Works', 'url' => ['/works']],
                             '<li class="divider"></li>',
                             ['label' => 'Account', 'url' => ['/user/account']],
                             ['label' => 'Profile', 'url' => ['/user/profile']],

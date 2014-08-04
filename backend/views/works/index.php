@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\grid\DataColumn;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\WorksSearch */
@@ -30,8 +31,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name:ntext',
             'page:ntext',
-            'description:ntext',
-
+            [
+                'class' => DataColumn::className(),
+                'attribute' => 'description',
+                'format' => 'html',
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

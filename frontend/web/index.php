@@ -21,6 +21,21 @@ $config = yii\helpers\ArrayHelper::merge(
 $application = new yii\web\Application($config);
 
 Yii::$app->on(\yii\base\Application::EVENT_BEFORE_REQUEST,function($event){
+    // Add rule for pages
+    $names = [];
+    $rows = (new \yii\db\Query())
+        ->select('name')
+        ->from(common\models\Page::tableName())
+        ->where(['status'=>1])
+        ->orderBy('output_order')
+        ->all();
+    foreach($rows as $row){
+        $names[] = $row['name'];
+    }
+    $names = implode('|',$names);
+    $rule = ['<name('.$names.')>' => 'page/viewbyname'];
+    Yii::$app->urlManager->addRules($rule,false);
+    // Mobile detect
     Yii::$app->params['detect'] = [
         'isMobile' => Yii::$app->mobiledetect->isMobile(),
         'isTablet' => Yii::$app->mobiledetect->isTablet(),

@@ -34,14 +34,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'title:ntext',
             [
                 'class' => DataColumn::className(),
-                'attribute' => 'content',
-                'format' => 'text',
-                'contentOptions' => [
-                    'style' => 'overflow-y:auto;max-height:200px;display:block;',
-                ],
+                'attribute' => 'status',
+                'content' => function($data) { return $data->status?Yii::t("view","Active"):Yii::t("view","Inactive"); },
+                'filter' => ['1'=>Yii::t("view","Active"),'0'=>Yii::t("view","Inactive")],
             ],
-            'script:ntext',
-            'status',
             'output_order',
 
             ['class' => 'yii\grid\ActionColumn'],

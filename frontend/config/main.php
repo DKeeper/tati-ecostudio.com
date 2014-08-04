@@ -36,8 +36,8 @@ return [
                 '<action(login|logout|register|account|profile)>' => 'user/<action>',
                 'files/<param:\d+x\d+>/<src:.+>' => 'files/resize',
                 'files/<src:.+>' => 'files/index',
+                'works' => 'works/index',
                 'works/<id:\d+>' => 'works/view',
-                '<name(\w+)>' => 'page/viewbyname',
             ],
         ],
         'assetManager' => [

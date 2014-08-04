@@ -13,6 +13,8 @@ use yii\widgets\DetailView;
 /* @var $model common\models\Page */
 
 $this->title = $model->title;
+$this->params['breadcrumbs'] = [];
+$this->params['breadcrumbs'][] = $this->title;
 if(isset($model->script)){
     $this->registerJs($model->script,yii\web\View::POS_LOAD);
 }
